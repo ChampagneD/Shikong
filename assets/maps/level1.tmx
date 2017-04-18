@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="56" height="6" tilewidth="181" tileheight="181" nextobjectid="5">
+ <tileset firstgid="1" name="tiles_spritesheet" tilewidth="181" tileheight="181" tilecount="24" columns="4">
+  <image source="../images/runner_tiles_spritesheet.png" width="724" height="1086"/>
+  <tile id="7">
+   <properties>
+    <property name="bouncing" value="20"/>
+    <property name="group" value="players"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="background" width="56" height="6">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+21,22,23,24,21,22,23,24,21,22,23,24,21,22,23,24,0,0,0,0,0,21,22,24,21,22,23,24,21,22,23,24,21,22,0,0,21,22,23,24,21,22,23,24,0,0,23,24,21,22,23,24,21,22,23,24,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="collision" width="56" height="6">
+  <properties>
+   <property name="collision" type="bool" value="true"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,3,0,0,0,0,0,0,0,0,6,3,0,0,0,0,0,0,0,0,0,0,
+13,14,15,16,13,14,15,16,13,14,14,15,16,13,15,16,4,0,0,0,5,13,14,16,13,14,15,16,13,14,15,16,13,17,18,19,20,14,15,16,13,14,15,17,18,19,20,16,13,14,15,16,13,14,15,16
+</data>
+ </layer>
+ <objectgroup name="object_layer">
+  <object id="3" name="player" type="player" gid="8" x="180" y="906" width="181" height="181">
+   <properties>
+    <property name="bouncing" type="int" value="0"/>
+    <property name="gravity" type="int" value="1500"/>
+    <property name="group" value="players"/>
+    <property name="jumping_speed" type="int" value="800"/>
+    <property name="texture" value="player_spritesheet"/>
+    <property name="walking_speed" type="int" value="900"/>
+   </properties>
+  </object>
+  <object id="4" name="goal" type="goal" gid="8" x="9592.67" y="902.667" width="181" height="181">
+   <properties>
+    <property name="group" value="goals"/>
+    <property name="next_level" value="assets/levels/level2.json"/>
+    <property name="texture" value="goal_image"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

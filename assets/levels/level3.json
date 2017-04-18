@@ -1,0 +1,18 @@
+{
+    "assets": {
+        "map_tiles": { "type": "image", "source": "assets/images/runner_tiles_spritesheet.png" },
+        "player_spritesheet": { "type": "spritesheet", "source": "assets/images/Shifu_spritesheet.png", "frame_width": 101, "frame_height": 104, "frames": 11, "margin": 0, "spacing": 0 },
+        "slime_image": { "type": "image", "source": "assets/images/esprit.png" },
+        "goal_image": { "type": "image", "source": "assets/images/panda.png" },
+        "level_tilemap": { "type": "tilemap", "source": "assets/maps/level3_map.json" }
+    },
+    "groups": [
+        "enemies",
+        "goals",
+        "players"
+    ],
+    "map": {
+        "key": "level_tilemap",
+        "tileset": "map_tiles"
+    }
+}
